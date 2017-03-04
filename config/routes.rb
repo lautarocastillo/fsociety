@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'game/play'
+
   get 'slangs/index'
 
+  post 'game/answer'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :questions
