@@ -1,0 +1,172 @@
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0;text-decoration:none;color:inherit}li,ul{list-style-type:none;margin:0;padding:0}a:active,a:hover{outline:0;color:inherit;}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;padding:0;margin:0}h2,h3,h4,h5,h6{font-weight:400;margin:0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/* line 3, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+body {
+  background-color: #f92964;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* line 10, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* line 19, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+footer .cright {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  max-width: 400px;
+  font-size: 12px;
+  text-align: right;
+}
+/* line 29, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+footer .fb {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background: url("fb.svg") no-repeat center/contain;
+}
+/* line 39, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+footer .fb:after {
+  content: '/  Slang';
+  position: absolute;
+  left: 25px;
+  font-weight: bold;
+  width: 100px;
+  font-size: 20px;
+}
+
+/* line 50, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+.notice,
+.alert {
+  position: absolute;
+}
+
+/* line 57, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+.map {
+  position: absolute;
+  width: 1000px;
+  height: 650px;
+  top: calc(50% - 270px);
+  left: calc(50% - 500px);
+  background: url("map.svg") no-repeat center/contain;
+}
+
+/* line 68, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+/* line 75, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header .logo {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 100px;
+  background: url("logo.svg") no-repeat center/contain;
+  animation: .3s linear 5s 1 rubberBand;
+}
+/* line 87, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc {
+  position: absolute;
+  right: 60px;
+  top: 30px;
+  background: blue;
+}
+/* line 93, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc h4 {
+  font-size: 23px;
+  top: 10px;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  right: 110px;
+  position: absolute;
+  letter-spacing: 0px;
+}
+/* line 104, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc a.logout {
+  position: absolute;
+  top: 40px;
+  right: 110px;
+  text-align: right;
+}
+/* line 112, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc .img-profile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  border: 7px solid #fff;
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background: yellow;
+}
+/* line 125, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc ul {
+  position: absolute;
+  right: 110px;
+  top: 60px;
+  height: 25px;
+  width: 75px;
+}
+/* line 133, /Users/JuanCarlos/Desktop/fsociety/app/assets/stylesheets/slangs.scss */
+header nav .acc ul li {
+  float: left;
+  width: calc(100% / 3);
+  background: url("heart.svg") no-repeat center/80%;
+  height: 100%;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= normalize
+
+
+ */
+
