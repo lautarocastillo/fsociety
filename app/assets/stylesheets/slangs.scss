@@ -85,9 +85,35 @@ footer{
 
 		.chile{
 		left:250px;
-		top:450px;
+		top:470px;
 		background:url('chile.svg') no-repeat center/contain;
 		}
+
+		.argentina{
+		left:280px;
+		top:420px;
+		background:url('argentina.svg') no-repeat center/contain;
+		}
+
+		.brasil{
+		left:320px;
+		top:400px;
+		background:url('brasil.svg') no-repeat center/contain;
+		}
+
+		.usa{
+		left:170px;
+		top:240px;
+		background:url('USA.svg') no-repeat center/contain;
+		}
+
+
+		.csoon{
+			-webkit-filter: grayscale(100%);
+    			filter: grayscale(100%);
+
+		}
+
 	}
 
 
@@ -354,6 +380,10 @@ header{
 .lvl-1{background-color:#F9299F}
 .lvl-2{background-color:#F929E1}
 .lvl-3{background-color:#CC29F9}
+.lvl-4{background-color:#F9299F}
+.lvl-5{background-color:#F929E1}
+.lvl-6{background-color:#CC29F9}
+
 
 
 
