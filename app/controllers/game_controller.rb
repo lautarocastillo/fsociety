@@ -9,7 +9,7 @@ class GameController < ApplicationController
 
 
   def answer
-    @questions.delete(@question)
+    @user = current_user
     @pflu = 0
     if params[:answer].present?
       answer = params[:answer]
@@ -25,6 +25,12 @@ class GameController < ApplicationController
         end
     end
     
+    if @user.life>0
+      redirect_to game_play_path
+    elsif @user.life==0
+      redirect_to root_path # ruta game over
+    end
+
   end
 
 
