@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   post 'game/answer'
 
 
-	resources :users do
-		 post 'game/answer'
-	end		
-
   resources :questions
 
   devise_for :users, controllers: { registrations: 'users/registrations' }

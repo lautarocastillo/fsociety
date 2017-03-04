@@ -2,7 +2,7 @@
 
 body{
 	background-color: $slang;
-	
+
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 }
@@ -63,6 +63,21 @@ footer{
 		top:calc(50% - 270px);
 		left:calc(50% - 500px);
 		background:url('map.svg') no-repeat center/contain;
+
+
+		.flag{
+			position:absolute;
+			width:40px;
+			height:40px;
+			background-color:#ccc;
+			border-radius:100%;
+		}
+
+		.chile{
+		left:250px;
+		top:450px;
+		background:url('chile.svg') no-repeat center/contain;
+		}
 	}
 
 
@@ -299,3 +314,70 @@ header{
 }
 
 .quest-lvl-one{background-color:salmon}
+
+
+
+
+
+.login-cont{
+	position:absolute;
+	left:calc(50% - 200px);
+	width:400px;
+	top:200px;
+	box-sizing:border-box;
+	padding:0 50px;
+
+	h2{
+		text-align:center;
+		font-size:50px;
+		font-weight:900;
+		font-style:italic;
+		position:relative;
+		margin:0 0 20px 0;
+		text-shadow: 0 5px 0 $slang-dark;
+	}
+
+
+	input{
+		width:calc(100% - 60px);
+		background:none;
+		border:2px solid $slang-dark;
+		padding:10px 30px;
+		font-size:20px;
+		border-radius:30px;
+		margin:10px 0;
+	}
+
+	input[type=submit]{
+		background:$slang-dark;
+		box-shadow:0 5px 0 $slang-dark2;
+		width:100%;
+		margin:10px 0 30px 0;
+		transition:$transition;
+		transform:translate(0,0);
+	}
+
+
+	input[type=submit]:hover{
+		box-shadow: 0 2px 0 $slang-dark2;
+		transform:translate(0,4px);
+		}
+
+	input[type=submit]:active{
+		box-shadow: 0 2px 0 $slang-dark2;
+		transform:translate(0,4px);
+		background-color:$slang-dark2;
+		}
+
+
+}
+
+.hyper{
+	padding:3px 0;
+	border-bottom:1px solid #fff;
+}
+
+.aright{
+	position:absolute;
+	right:50px;
+}
