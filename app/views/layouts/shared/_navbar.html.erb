@@ -3,17 +3,16 @@
 	<% if user_signed_in? %>
 	<nav>
 		<div class="acc">
-			<h4>Usuario</h4>
+			<h4><%= current_user.name %></h4>
 			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Salir</a>
 			<div class="img-profile"></div>
-			<div class="display-level">1</div>
+			<div class="display-level"><%= current_user.level %></div>
 				<ul>
 				<li></li>
 				<li></li>
 				<li></li>
 				</ul>
 		</div>		
-	<a href="<%= game_play_path %>">Jugar</a>
 	</nav>
 
 	<% else %>
@@ -26,5 +25,4 @@
 
 
 </header>
-
 

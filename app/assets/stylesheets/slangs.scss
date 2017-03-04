@@ -5,6 +5,7 @@ body{
 
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
+	overflow:hidden;
 }
 
 
@@ -63,6 +64,9 @@ footer{
 		top:calc(50% - 270px);
 		left:calc(50% - 500px);
 		background:url('map.svg') no-repeat center/contain;
+			transition:$transition;
+			transform:scale(1.2);
+			opacity:0;
 
 
 		.flag{
@@ -71,6 +75,12 @@ footer{
 			height:40px;
 			background-color:#ccc;
 			border-radius:100%;
+			transform:scale(1);
+			transition:$transition;
+		}
+
+		.flag:hover{
+			transform:scale(1.4);
 		}
 
 		.chile{
@@ -79,7 +89,6 @@ footer{
 		background:url('chile.svg') no-repeat center/contain;
 		}
 	}
-
 
 
 header{
@@ -97,8 +106,9 @@ header{
 		width:300px;
 		height:100px;
 		background:url('logo.svg') no-repeat center/contain;
-		animation: .3s linear 5s 1 rubberBand;
-	}
+		animation: .3s linear 3s 1 rubberBand;
+
+		}
 
 	nav{
 
@@ -110,13 +120,26 @@ header{
 			h4{
 				font-size:23px;
 				top:10px;
+				width:200px;
+				height:30px;
 				text-align:right;
 				text-transform: uppercase;
 				font-weight:bold;
 				right:110px;
+				overflow:hidden;
 				position:absolute;
 				letter-spacing: 0px;
 			}
+
+			/*h4::after{
+				content:'';
+				position:absolute;
+				top:0;
+				right:0;
+				background:linear-gradient( to right, rgba(0,0,0,0), $slang); 
+				width:30px;
+				height:30px;
+			}*/
 
 			a.logout{
 				position:absolute;
@@ -381,3 +404,20 @@ header{
 	position:absolute;
 	right:50px;
 }
+
+
+.fb-login{
+	background:#3b5998;
+	padding:8px 20px;
+	border-radius:10px;
+	position:absolute;
+	right:60px;
+	margin:-4px 0 0 0;
+
+}
+
+input{outline:none;}
+input::-webkit-input-placeholder {color: #fff;}
+input::-moz-placeholder {color: #fff;}
+input:-ms-input-placeholder {color: #fff;}
+input:-moz-placeholder {color: #fff;}
