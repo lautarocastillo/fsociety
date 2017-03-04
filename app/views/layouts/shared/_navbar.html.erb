@@ -12,10 +12,7 @@
 				</ul>
 		</div>		
 	</nav>
-</header>
-
-
-<a href="<%= root_path %>">Index</a>
+	<a href="<%= root_path %>">Index</a>
 <a href="<%= questions_path %>">Questions</a>
 <a href="<%= game_play_path %>">Jugar</a>
 
@@ -25,5 +22,9 @@
 <% else %>
   <a href="<%= destroy_user_session_path  %>" data-method="delete">Salir</a>
 <% end %>
+
+</header>
+
+
 
 

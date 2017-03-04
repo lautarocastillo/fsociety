@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   post 'game/answer'
 
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :questions
   root 'slangs#index'
