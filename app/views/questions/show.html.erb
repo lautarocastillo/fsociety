@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+
+<p>
+  <strong>A:</strong>
+  <%= @question.a %>
+</p>
+
+<p>
+  <strong>B:</strong>
+  <%= @question.b %>
+</p>
+
+<p>
+  <strong>C:</strong>
+  <%= @question.c %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @question.country %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
