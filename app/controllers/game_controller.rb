@@ -1,5 +1,5 @@
 class GameController < ApplicationController
-  
+    before_action :authenticate_user!, except: [:index]
 
   @@ltu = 0
   @@q1 = Question.where(level: 1).to_a

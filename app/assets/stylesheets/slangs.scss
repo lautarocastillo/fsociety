@@ -176,6 +176,20 @@ header{
 				text-align:center;
 				font-weight:900;
 				font-size:20px;
+
+				span{
+					position:absolute;
+					background:$slang;
+					padding:6px 5px;
+					border-radius:3px;
+					color:#fff;
+					width:100px;
+					top:30px;
+					left:-100px;
+					text-align:center;
+					font-size:13px;
+
+				}
 			}
 
 			ul{
@@ -224,6 +238,7 @@ header{
 			left:0;
 			width:100%;
 			height:100vh;
+			transition:$transition;
 
 
 		form{
@@ -336,7 +351,9 @@ header{
 
 }
 
-.quest-lvl-one{background-color:salmon}
+.lvl-1{background-color:#F9299F}
+.lvl-2{background-color:#F929E1}
+.lvl-3{background-color:#CC29F9}
 
 
 
