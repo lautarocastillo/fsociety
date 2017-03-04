@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'game/over'
 
+  get 'game/win'
+
   devise_for :users, controllers: {
   registrations: "users/registrations",
   sessions: "users/sessions",
