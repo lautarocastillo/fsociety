@@ -1,0 +1,156 @@
+@import 'variables.scss';
+
+body{
+	background-color: $slang;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height:60px;
+	padding:20px;
+	box-sizing: border-box;
+
+
+	.cright{
+		position:absolute;
+		right: 40px;
+		top:0;
+		max-width: 400px;
+		font-size:12px;
+		text-align: right;
+
+	}
+
+	.fb{
+		position:absolute;
+		top:0;
+		left: 40px;
+		width:20px;
+		height:20px;
+		background:url('fb.svg') no-repeat center/contain;
+
+	}
+
+	.fb:after{
+		content:'/  Slang';
+		position:absolute;
+		left:25px;
+		font-weight:bold;
+		width:100px;
+		font-size:20px;
+	}
+
+}
+
+.notice,
+.alert{
+	position:absolute;
+}
+
+
+
+	.map{
+		position:absolute;
+		width:1000px;
+		height:650px;
+		top:calc(50% - 270px);
+		left:calc(50% - 500px);
+		background:url('map.svg') no-repeat center/contain;
+	}
+
+
+
+header{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100px;
+
+	.logo{
+		position:absolute;
+		top:50px;
+		left:calc(50% - 150px);
+		width:300px;
+		height:100px;
+		background:url('logo.svg') no-repeat center/contain;
+		animation: .3s linear 5s 1 rubberBand;
+	}
+
+	nav{
+
+		.acc{
+			position:absolute;
+			right:60px;
+			top:30px;
+			background:blue;
+
+			h4{
+				font-size:23px;
+				top:10px;
+				text-align:right;
+				text-transform: uppercase;
+				font-weight:bold;
+				right:110px;
+				position:absolute;
+				letter-spacing: 0px;
+			}
+
+			a.logout{
+				position:absolute;
+				top:40px;
+				right:110px;
+				text-align:right;
+			}
+
+
+			.img-profile{
+				position:absolute;
+				right:0;
+				top:0;
+				box-sizing:border-box;
+				border:7px solid #fff;
+				overflow: hidden;
+				width:90px;
+				height:90px;
+				border-radius:100%;
+				background:yellow;
+			}
+
+			ul{
+				position:absolute;
+				right:110px;
+				top:60px;
+				height:25px;
+				width:75px;
+			}
+
+			ul li{
+				float:left;
+				width:calc(100% / 3);
+				background:url('heart.svg') no-repeat center/80%;
+				height:100%;
+			}
+
+		}
+
+	}
+
+}
+
+
+@keyframes rubberBand {
+  from {transform: scale3d(1, 1, 1);}
+  30% {transform: scale3d(1.25, 0.75, 1);}
+  40% {transform: scale3d(0.75, 1.25, 1);}
+  50% {transform: scale3d(1.15, 0.85, 1);}
+  65% {transform: scale3d(.95, 1.05, 1);}
+  75% {transform: scale3d(1.05, .95, 1);}
+  to {transform: scale3d(1, 1, 1);}
+}
+
