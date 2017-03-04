@@ -15,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     protected
   
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :name, :level, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :name, :level,  :photo, :remote_photo_url, :photo_cache])
   end
 
   # GET /resource/edit
