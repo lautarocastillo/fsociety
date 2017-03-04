@@ -6,7 +6,12 @@ match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], 
 
   post 'game/answer'
 
-  devise_for :users, controllers: { registrations: 'users/registrations', omniauth_callbacks: 'omniauth_callbacks' }
+  devise_for :users, controllers: {
+  registrations: "users/registrations",
+  sessions: "users/sessions",
+  passwords: "users/passwords",
+  omniauth_callbacks: "users/omniauth_callbacks"}
+
   resources :questions
   root 'slangs#index'
 
