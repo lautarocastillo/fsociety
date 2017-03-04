@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'slangs/index'
 
+  post 'game/answer'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :questions
