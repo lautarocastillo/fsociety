@@ -8,11 +8,9 @@
 
 
 User.destroy_all
+Question.delete_all
 
 User.create(email: 'admin@com', password:'123456')
-
-
-Question.delete_all
 
 #Chile
 
@@ -28,4 +26,3 @@ Question.create(title:"Sacate un carrete", a:"Hacer la tarea", b:"Hacer una fies
 Question.create(title:"Esa mina esta muy rica", a:"Ese negocio esta muy malo", b:"Ese reloj esta muy bueno", c:"Esa mujer esta muy buena", country:"Chile", level: 1)
 Question.create(title:"Oh que estuvo peluda la prueba", a:"La prueba estuvo muy facil", b:"La prueba estuvo muy dificil", c:"No tuvimos prueba", country:"Chile", level: 1)
 Question.create(title:"Vamos a jugar su pichanga", a:"Vamos a jugar futbol", b:"Vamos a jugar tenis", c:"Vamos a jugar en la calle", country:"Chile", level: 1)
-
