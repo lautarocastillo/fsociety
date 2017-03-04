@@ -1,15 +1,20 @@
 class GameController < ApplicationController
   
   def play
-  	@user = current_user
-  	@questions = Question.all
-  	@order = rand(1..3) 
+
+    @user = current_user
+    @questions = Question.where(level: @user.level).to_a
+    @question = @questions.sample
+    @order = rand(1..3) 
   end
 
+
   def answer
+
+    @questions.delete(@question)
     @pflu = 0
-  	if params[:answer].present?
-	    answer = params[:answer]
+    if params[:answer].present?
+      answer = params[:answer]
         if answer == "a"
           @pflu += 1
             if @pflu == 3
