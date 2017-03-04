@@ -24,7 +24,6 @@ class GameController < ApplicationController
     
   end
 
-
   def lose_life
     if @user.life > 0
       ull = @user
@@ -43,5 +42,4 @@ class GameController < ApplicationController
     ulu.level += 1
     ulu.save
   end
-
 end
