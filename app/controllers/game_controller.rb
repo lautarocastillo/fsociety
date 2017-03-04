@@ -6,6 +6,7 @@ class GameController < ApplicationController
     @questions = Question.where(level: @user.level).to_a
     @question = @questions.sample
     @order = rand(1..3) 
+
   end
 
 
