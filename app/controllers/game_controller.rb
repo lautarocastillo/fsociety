@@ -8,7 +8,7 @@ class GameController < ApplicationController
   def answer
   	if params[:answer].present?
   		answer = params[:answer]
-  		# p answer
+  	  p answer
   	end
   end
 

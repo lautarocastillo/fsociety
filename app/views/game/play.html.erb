@@ -29,10 +29,10 @@
 
 <% when 3 %>
 
-	<%= radio_button_tag(:answer, "b") %>
-	<%= label_tag(:b, @questions.first.b) %>
 	<%= radio_button_tag(:answer, "c") %>
 	<%= label_tag(:c, @questions.first.c) %>
+	<%= radio_button_tag(:answer, "b") %>
+	<%= label_tag(:b, @questions.first.b) %>
 	<%= radio_button_tag(:answer, "a") %>
 	<%= label_tag(:a, @questions.first.a) %>
 <% end %>
