@@ -1,27 +1,78 @@
 class GameController < ApplicationController
-  
+    before_action :authenticate_user!, except: [:index]
+
+  @@ltu = 0
+  @@q1 = Question.where(level: 1).to_a
+  @@q2 = Question.where(level: 2).to_a
+  @@q3 = Question.where(level: 3).to_a
+  @@q4 = Question.where(level: 4).to_a
+  @@q5 = Question.where(level: 5).to_a
+
   def play
-  	@user = current_user
-  	@questions = Question.all
-  	@order = rand(1..3) 
+    @user = current_user
+    # @questions = Question.where(level: @user.level).to_a
+    if @user.level >= 6
+      redirect_to game_win_path
+    end
+    case @user.level
+    when 1  
+      @questions = @@q1 
+      @question = @questions.sample
+      @@q1.delete(@question)
+      @@q1.compact!
+    when 2  
+      @questions = @@q2 
+      @question = @questions.sample
+      @@q2.delete(@question)
+      @@q2.compact!
+    when 3  
+      @questions = @@q3 
+      @question = @questions.sample
+      @@q3.delete(@question)
+      @@q3.compact!
+    when 4  
+      @questions = @@q4 
+      @question = @questions.sample
+      @@q4.delete(@question)
+      @@q4.compact!
+    when 5  
+      @questions = @@q5 
+      @question = @questions.sample
+      @@q5.delete(@question)
+      @@q5.compact!
+    end
+
+
+    @order = rand(1..3) 
+
   end
 
+
   def answer
-    @pflu = 0
-  	if params[:answer].present?
-	    answer = params[:answer]
+    @notice=""
+
+    @user = current_user
+    if params[:answer].present?
+      answer = params[:answer]
         if answer == "a"
-          @pflu += 1
-            if @pflu == 3
-              level_up
-              @plf = 0
+          @@ltu += 1
+            if @@ltu == 3
+              
+              up
+              p @notice
+              @@ltu = 0
             end
         else
           lose_life
-            
         end
     end
     
+    if @user.life>0
+      redirect_to game_play_path, notice: @notice
+    elsif @user.life==0
+      redirect_to game_over_path # ruta game over
+    end
+
   end
 
 
@@ -36,12 +87,16 @@ class GameController < ApplicationController
   end
 
   def game_over
+    @user=current_user
+    @user.life=3 
+    @user.save
   end
 
-  def level_up
-    ulu = @user
-    ulu.level += 1
-    ulu.save
+  def up
+    @a = current_user
+    @a.level += 1
+    @a.save
+    @notice="hola"
   end
 
 end

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   post 'game/answer'
 
+  get 'game/over'
+
+  get 'game/win'
+
   devise_for :users, controllers: {
   registrations: "users/registrations",
   sessions: "users/sessions",
@@ -13,6 +17,8 @@ Rails.application.routes.draw do
 
 
   resources :questions
+
+
   root 'slangs#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
