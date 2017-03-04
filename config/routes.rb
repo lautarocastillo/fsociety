@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   post 'game/answer'
 
+  get 'game/over'
+
   devise_for :users, controllers: {
   registrations: "users/registrations",
   sessions: "users/sessions",

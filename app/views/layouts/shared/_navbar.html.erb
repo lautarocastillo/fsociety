@@ -8,9 +8,9 @@
 			<div class="img-profile"></div>
 			<div class="display-level"><%= current_user.level %></div>
 				<ul>
-				<li></li>
-				<li></li>
-				<li></li>
+				<% (current_user.life).times do %>
+					<li></li>
+				<% end %>
 				</ul>
 		</div>		
 	</nav>

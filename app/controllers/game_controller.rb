@@ -1,7 +1,6 @@
 class GameController < ApplicationController
   
   def play
-
     @user = current_user
     @questions = Question.where(level: @user.level).to_a
     @question = @questions.sample
@@ -11,7 +10,6 @@ class GameController < ApplicationController
 
 
   def answer
-
     @user = current_user
     @pflu = 0
     if params[:answer].present?
@@ -31,7 +29,7 @@ class GameController < ApplicationController
     if @user.life>0
       redirect_to game_play_path
     elsif @user.life==0
-      redirect_to root_path # ruta game over
+      redirect_to game_over_path # ruta game over
     end
 
   end
