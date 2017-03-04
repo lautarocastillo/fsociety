@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 20170304112517) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "level",                  default: 1
+    t.integer  "level",                  default: 0
     t.string   "name"
-    t.integer  "life",                   default: 3
     t.string   "provider"
     t.string   "uid"
+    t.integer  "life",                   default: 3
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
