@@ -1,5 +1,6 @@
 class GameController < ApplicationController
   
+
   @@ltu = 0
   @@q1 = Question.where(level: 1).to_a
   @@q2 = Question.where(level: 2).to_a
@@ -48,13 +49,17 @@ class GameController < ApplicationController
 
 
   def answer
+    @notice=""
+
     @user = current_user
     if params[:answer].present?
       answer = params[:answer]
         if answer == "a"
           @@ltu += 1
             if @@ltu == 3
+              
               up
+              p @notice
               @@ltu = 0
             end
         else
@@ -63,7 +68,7 @@ class GameController < ApplicationController
     end
     
     if @user.life>0
-      redirect_to game_play_path
+      redirect_to game_play_path, notice: @notice
     elsif @user.life==0
       redirect_to game_over_path # ruta game over
     end
@@ -91,6 +96,7 @@ class GameController < ApplicationController
     @a = current_user
     @a.level += 1
     @a.save
+    @notice="hola"
   end
 
 end
