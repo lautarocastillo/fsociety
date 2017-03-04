@@ -1,15 +1,20 @@
 class GameController < ApplicationController
   
   def play
-  	@user = current_user
-  	@questions = Question.all
-  	@order = rand(1..3) 
+
+    @user = current_user
+    @questions = Question.where(level: @user.level).to_a
+    @question = @questions.sample
+    @order = rand(1..3) 
+
   end
 
+
   def answer
+    @user = current_user
     @pflu = 0
-  	if params[:answer].present?
-	    answer = params[:answer]
+    if params[:answer].present?
+      answer = params[:answer]
         if answer == "a"
           @pflu += 1
             if @pflu == 3
@@ -22,6 +27,13 @@ class GameController < ApplicationController
         end
     end
     
+    if @user.life>0
+      redirect_to game_play_path
+    elsif @user.life==0
+      redirect_to root_path # ruta game over
+    end
+
+
   end
 
 
