@@ -1,3 +1,4 @@
+<div class="question-form quest-lvl-one ">
 <%= form_tag(game_answer_path) do %>
 	
 <h2><%= @questions.first.title %></h2>
@@ -5,35 +6,82 @@
 
 <% case @order %>
 <% when 1 %>
-
+	<div class="cont-answer">
 	<%= radio_button_tag(:answer, "a") %>
-	<%= label_tag(:a, @questions.first.a) %>
+	<%= label_tag(:a, @questions.first.a) %><br>
 	<%= radio_button_tag(:answer, "b") %>
-	<%= label_tag(:b, @questions.first.b) %>
+	<%= label_tag(:b, @questions.first.b) %><br>
 	<%= radio_button_tag(:answer, "c") %>
 	<%= label_tag(:c, @questions.first.c) %>
-
+	</div>
 
 <% when 2 %>
-
+	<div class="cont-answer">
 	<%= radio_button_tag(:answer, "b") %>
-	<%= label_tag(:b, @questions.first.b) %>
+	<%= label_tag(:b, @questions.first.b) %><br>
 	<%= radio_button_tag(:answer, "a") %>
-	<%= label_tag(:a, @questions.first.a) %>
+	<%= label_tag(:a, @questions.first.a) %><br>
 	<%= radio_button_tag(:answer, "c") %>
 	<%= label_tag(:c, @questions.first.c) %>
-
+	</div>
 
 <% when 3 %>
-
+	<div class="cont-answer">
 	<%= radio_button_tag(:answer, "c") %>
-	<%= label_tag(:c, @questions.first.c) %>
+	<%= label_tag(:c, @questions.first.c) %><br>
 	<%= radio_button_tag(:answer, "b") %>
-	<%= label_tag(:b, @questions.first.b) %>
+	<%= label_tag(:b, @questions.first.b) %><br>
 	<%= radio_button_tag(:answer, "a") %>
 	<%= label_tag(:a, @questions.first.a) %>
+	</div>
 <% end %>
 
 
 	<%= submit_tag "enviar" %>
 <% end -%>
+</div>
+
+
+
+<div class="question-form quest-lvl-one">
+<%= form_tag(game_answer_path) do %>
+	
+<h2><%= @questions.first.title %></h2>
+
+
+<% case @order %>
+<% when 1 %>
+	<div class="cont-answer">
+	<%= radio_button_tag(:answer, "a") %>
+	<%= label_tag(:a, @questions.first.a) %><br>
+	<%= radio_button_tag(:answer, "b") %>
+	<%= label_tag(:b, @questions.first.b) %><br>
+	<%= radio_button_tag(:answer, "c") %>
+	<%= label_tag(:c, @questions.first.c) %>
+	</div>
+
+<% when 2 %>
+	<div class="cont-answer">
+	<%= radio_button_tag(:answer, "b") %>
+	<%= label_tag(:b, @questions.first.b) %><br>
+	<%= radio_button_tag(:answer, "a") %>
+	<%= label_tag(:a, @questions.first.a) %><br>
+	<%= radio_button_tag(:answer, "c") %>
+	<%= label_tag(:c, @questions.first.c) %>
+	</div>
+
+<% when 3 %>
+	<div class="cont-answer">
+	<%= radio_button_tag(:answer, "c") %>
+	<%= label_tag(:c, @questions.first.c) %><br>
+	<%= radio_button_tag(:answer, "b") %>
+	<%= label_tag(:b, @questions.first.b) %><br>
+	<%= radio_button_tag(:answer, "a") %>
+	<%= label_tag(:a, @questions.first.a) %>
+	</div>
+<% end %>
+
+
+	<%= submit_tag "enviar" %>
+<% end -%>
+</div>

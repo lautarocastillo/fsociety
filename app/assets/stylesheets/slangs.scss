@@ -2,6 +2,7 @@
 
 body{
 	background-color: $slang;
+	
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 }
@@ -14,6 +15,7 @@ footer{
 	height:60px;
 	padding:20px;
 	box-sizing: border-box;
+	z-index: 2;
 
 
 	.cright{
@@ -71,6 +73,7 @@ header{
 	left:0;
 	width:100%;
 	height:100px;
+	z-index:3;
 
 	.logo{
 		position:absolute;
@@ -88,7 +91,6 @@ header{
 			position:absolute;
 			right:60px;
 			top:30px;
-			background:blue;
 
 			h4{
 				font-size:23px;
@@ -119,7 +121,23 @@ header{
 				width:90px;
 				height:90px;
 				border-radius:100%;
-				background:yellow;
+				box-shadow: 0 8px 0 $slang-dark;
+				background:url('http://intelligentsystemsmonitoring.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png') no-repeat center/contain;
+			}
+
+			.display-level{
+				position:absolute;
+				right:0;
+				top:60px;
+				width:40px;
+				border-radius:100%;
+				height:40px;
+				background:#fff;
+				color:$slang;
+				line-height:40px;
+				text-align:center;
+				font-weight:900;
+				font-size:20px;
 			}
 
 			ul{
@@ -154,3 +172,130 @@ header{
   to {transform: scale3d(1, 1, 1);}
 }
 
+
+.cont-question{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+
+
+		.question-form{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100vh;
+
+
+		form{
+			width:900px;
+			height:300px;
+			position:absolute;
+			left:calc(50% - 450px);
+			top:calc(50% - 150px);
+
+
+			h2{
+				text-align:center;
+				font-size:50px;
+				font-weight:900;
+				font-style:italic;
+				position:relative;
+				margin:0 0 20px 0;
+				text-shadow: 0 5px 0 $slang-dark;
+			}
+
+			h2:after{
+				content: '"';
+				position:absolute;
+				top:0;
+				font-style:bold;
+				font-size:40px;
+			}
+
+			h2:before{
+				content: '"';
+				position:absolute;
+				top:0;
+				margin-left:-17px;
+				font-style:bold;
+				font-size:40px;
+			}
+
+
+			input[type=checkbox]:not(old),
+			input[type=radio]:not(old){
+			  width   : 34px;
+			  margin  : 0;
+			  padding : 0;
+			  opacity : 0;  
+			  cursor: pointer;  
+			}
+
+			input[type=checkbox]:not(old) + label,
+			input[type=radio]:not(old) + label{
+			  display      : inline-block;
+			  margin:12px 0;
+			  cursor: pointer;
+			  margin-left  : -34px;
+			  padding-left : 34px;
+			  background   : url('checks.png') no-repeat 0 -2px;
+			  line-height  : 24px;
+			  font-size:25px;
+			  font-weight:400;
+			  transition:all cubic-bezier(.54,.66,.26,.95) .3s;
+			}
+
+			input[type=checkbox]:not(old):checked + label{
+			  background-position : 0 -40px;
+			}
+
+			input[type=radio]:not(old):checked + label{
+			  background-position : 0 -33px;
+			}
+
+
+			.cont-answer{
+				position:relative;
+				left:250px;
+				width:60%;
+			}
+
+			input[type=submit]{
+				position:relative;
+				width:170px;
+				margin:30px 0;
+				padding:15px 0;
+				border-radius:30px;
+				background:$slang-dark;
+				box-shadow: 0 6px 0 $slang-dark2;
+				outline: 0;
+				border:0;
+				font-size:20px;
+				left:calc(50% - 100px);
+				transition:$transition;
+				transform:translate(0,0);
+
+				
+			}
+
+			input[type=submit]:hover{
+					box-shadow: 0 2px 0 $slang-dark2;
+					transform:translate(0,4px);
+				}
+
+
+		}
+
+
+
+
+
+		}
+	
+
+
+}
+
+.quest-lvl-one{background-color:salmon}
